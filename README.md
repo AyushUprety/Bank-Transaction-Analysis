@@ -2,14 +2,14 @@
 Data analysis of a real Czech bank. 
 
 ### Motivation
-The notebook contains overview of following questions and even more than that: 
--  Customers age and gender population overview.
--  Can we identify most attractive districts in Czech Republic for future marketing campaigns? Criteria: higher number of inhabitants, prominent average salary and low level of clients representation.
--  Credit department efficiency overview within country: which districts are giving mostly “good” or “bad” loans?
--  Bank’s funds inflows and outflows analysis. Does the bank face negative cash flow rarely or often? Is there any patterns for funds outlay?
+The notebook contains an overview of the following questions and even more than that: 
+- An overview of the age and gender distribution among customers.
+- Can we pinpoint the most promising districts in the Czech Republic for future marketing efforts? Key factors include a larger population, higher average salaries, and lower client representation.
+- A review of the credit department's performance across the country: which districts are primarily issuing "good" or "bad" loans?
+- An analysis of the bank's cash inflows and outflows: does the bank frequently experience negative cash flow, and are there any discernible patterns in how funds are allocated?
 
 ### Install
-This project requires Python 3.x and the following Python libraries installed:
+This project requires Python 3. x and the following Python libraries installed:
 
 1. NumPy
 2. Pandas
@@ -20,22 +20,21 @@ This project requires Python 3.x and the following Python libraries installed:
 
 You will also need to have software installed to run and execute an iPython Notebook
 
-### Code
-Code is provided in the Czech-banking-customer-trans-analysis.ipynb notebook file. 
+
 
 ### Data 
+The dataset comes from a real Czech bank and covers the period from 1993 to 1998, with data collected in 1999. It includes various relationships related to clients and their accounts:
 
-Data from a real Czech bank. From 1999. Reported period 1993 - 1998.
-The data about the clients and their accounts consist of following relations:
--  relation account (4500 objects in the file ACCOUNT.CSV) - each record describes static characteristics of an account,
--  relation client (5369 objects in the file CLIENT.CSV) - each record describes characteristics of a client,
--  relation disposition (5369 objects in the file DISP.CSV) - each record relates together a client with an account i.e. this relation describes the rights of clients to operate accounts,
--  relation permanent order (6471 objects in the file ORDER.CSV) - each record describes characteristics of a payment order,
--  relation transaction (1056320 objects in the file TRANS.CSV) - each record describes one transaction on an account,
--  relation loan (682 objects in the file LOAN.CSV) - each record describes a loan granted for a given account,
--  relation credit card (892 objects in the file CARD.CSV) - each record describes a credit card issued to an account,
--  relation demographic data (77 objects in the file DISTRICT.CSV) - each record describes demographic characteristics of a district.
-Each account has both static characteristics (e.g. date of creation, address of the branch) given in relation "account" and dynamic characteristics (e.g. payments debited or credited, balances) given in relations "permanent order" and "transaction". Relation "client" describes characteristics of persons who can manipulate with the accounts. One client can have more accounts, more clients can manipulate with single account; clients and accounts are related together in relation "disposition". Relations "loan" and "credit card" describe some services which the bank offers to its clients; more credit cards can be issued to an account, at most one loan can be granted for an account. Relation "demographic data" gives some publicly available information about the districts (e.g. the unemployment rate); additional information about the clients can be deduced from this.
+- **Account**: Contains 4,500 records in ACCOUNT.CSV, each detailing the static characteristics of an account.
+- **Client**: Features 5,369 records in CLIENT.CSV, describing the characteristics of each client.
+- **Disposition**: Links clients to accounts in DISP.CSV, detailing the rights clients have to operate those accounts (5,369 records).
+- **Permanent Order**: Includes 6,471 records in ORDER.CSV, describing the characteristics of payment orders.
+- **Transaction**: Contains 1,056,320 records in TRANS.CSV, each representing a single transaction on an account.
+- **Loan**: Features 682 records in LOAN.CSV, detailing loans granted for specific accounts.
+- **Credit Card**: Includes 892 records in CARD.CSV, describing credit cards issued to accounts.
+- **Demographic Data**: Comprises 77 records in DISTRICT.CSV, providing demographic characteristics of different districts.
+
+Each account has both static attributes (such as creation date and branch address) detailed in the "account" relation and dynamic attributes (like debits, credits, and balances) found in the "permanent order" and "transaction" relations. The "client" relation outlines the characteristics of individuals who can manage the accounts. One client may hold multiple accounts, and multiple clients can operate a single account, with these relationships mapped in the "disposition" relation. The "loan" and "credit card" relations describe the bank's offerings, where multiple credit cards can be issued per account, but only one loan can be assigned to an account. Lastly, the "demographic data" provides publicly available information about districts, such as unemployment rates, which can help infer additional details about clients.
 
 Data map 
 
@@ -56,7 +55,7 @@ This will open the iPython Notebook software and project file in your browser.
 
 ### Acknowledgement
 
-I am thankful to @lpetrocelli for real Czech bank's data shared at https://data.world/lpetrocelli/czech-financial-dataset-real-anonymized-transactions and to TSilveira for data visualization examples: https://www.kaggle.com/tsilveira/applying-heatmaps-for-categorical-data-analysis  
+I want to express my gratitude to @lpetrocelli for providing the real Czech bank data available at [data.world](https://data.world/lpetrocelli/czech-financial-dataset-real-anonymized-transactions), and to TSilveira for the valuable data visualization examples shared on [Kaggle](https://www.kaggle.com/tsilveira/applying-heatmaps-for-categorical-data-analysis).
 
 ### License 
 Code released under the MIT License. 
