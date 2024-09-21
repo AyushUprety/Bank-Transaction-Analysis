@@ -1,4 +1,3 @@
-# Czech Bank's Financial Data Analysis. Moving from gut feeling to data-driven decisions.
 Data analysis of a real Czech bank. 
 
 ### Motivation
